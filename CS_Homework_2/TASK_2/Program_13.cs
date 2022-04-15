@@ -2,7 +2,7 @@
 третью цифру заданного числа или сообщает, что третьей
 цифры нет.*/
 
-for (; ; )
+for (;;)
 {
 
     Console.Write("Please input integer number: ");
