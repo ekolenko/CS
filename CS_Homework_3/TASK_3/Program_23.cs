@@ -1,7 +1,7 @@
 ﻿
 /*Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N*/
 
-for (;;)
+for (; ; )
 {
 
     Console.Write("Please input integer number: ");
@@ -11,9 +11,13 @@ for (;;)
 
         int number = Convert.ToInt32(Console.ReadLine());
 
-        printCube(number); 
-        break;       
+        if (number >= 1)
+        {
+            printCube(number);
+            break;
+        }
 
+        else Console.WriteLine("Error! You inputed number less then 1. Try more.");
     }
 
     catch (System.FormatException)
