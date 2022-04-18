@@ -19,13 +19,13 @@
 
  Console.Write("Please input a quadrant number: ");
  
- string getRange(string anyString2)
+ string getRange(string anyString)
  {
 
-     if (anyString2 == "1") return "X > 0 , Y > 0";    
-     if (anyString2 == "2") return "X > 0 , Y < 0";
-     if (anyString2 == "3") return "X < 0 , Y < 0";
-     if (anyString2 == "4") return "X < 0 , Y > 0";
+     if (anyString == "1") return "X > 0 , Y > 0";    
+     if (anyString == "2") return "X > 0 , Y < 0";
+     if (anyString == "3") return "X < 0 , Y < 0";
+     if (anyString == "4") return "X < 0 , Y > 0";
 
 
      return "You inputed wrong quadrant!";

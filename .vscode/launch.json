@@ -6,13 +6,18 @@
     "configurations": [
         
         {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/CS_Lesson_1_L/Example_2/bin/Debug/net6.0/Example_2.dll",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/CS_Lesson_2_P/TASK_1/bin/Debug/net6.0/TASK_1.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/CS_Lesson_1_L/Example_2",
+            "cwd": "${workspaceFolder}/CS_Lesson_2_P/TASK_1",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
         },
