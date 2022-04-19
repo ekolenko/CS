@@ -19,7 +19,7 @@
 
  Console.Write("Please input a quadrant number: ");
  
- string getRange(string anyString)
+ string getRange(string? anyString)
  {
 
      if (anyString == "1") return "X > 0 , Y > 0";    
