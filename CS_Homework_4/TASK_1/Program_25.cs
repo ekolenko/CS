@@ -34,7 +34,6 @@ double MyPow (int a, int b)
 int InputIntNumber(string numberName)
 {   
     Console.Write($"Input integer number {numberName}: ");
-
     int number;
     
     while (!int.TryParse(Console.ReadLine(), out number))
