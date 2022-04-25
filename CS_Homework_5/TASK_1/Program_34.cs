@@ -7,6 +7,11 @@ const int TO = 1000;
 
 
 int arrLength = InputIntNumber("Input array size: ");
+if (arrLength <= 0) 
+{   
+    Console.WriteLine("Array size must be more than 0");
+    return;
+}
 int[] arr = new int [arrLength];
 RandomizeArray(arr, FROM, TO);
 PrintArray(arr);

@@ -3,12 +3,15 @@
 Длина массива задается с терминала.*/
 
 int arrLength = InputIntNumber("Input array size: ");
+if (arrLength <= 0) 
+{   
+    Console.WriteLine("Array size must be more than 0");
+    return;
+}
 int[] arr = new int [arrLength];
-
 RandomizeArray(arr, int.MinValue, int.MaxValue);
 PrintArray(arr);
 Console.WriteLine("Sum of odd index elements = " + FindSumOddIndexElements(arr));
-
 
 
 int InputIntNumber(string messageText)

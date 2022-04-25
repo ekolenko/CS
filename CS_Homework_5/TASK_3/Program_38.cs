@@ -3,6 +3,11 @@
 Длина массива задается с терминала.*/
 
 int arrLength = InputIntNumber("Input array size: ");
+if (arrLength <= 0) 
+{   
+    Console.WriteLine("Array size must be more than 0");
+    return;
+}
 double[] arr = new double [arrLength];
 FillArray(arr);
 PrintArray(arr);
