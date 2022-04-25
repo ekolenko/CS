@@ -11,7 +11,7 @@ if (arrLength <= 0)
 double[] arr = new double [arrLength];
 FillArray(arr);
 PrintArray(arr);
-Console.WriteLine("Difference between MAX and MIN value = " + FindDifferenceMaxMin(arr));
+Console.WriteLine("Difference between MAX and MIN values = " + FindDifferenceMaxMin(arr));
 
 
 int InputIntNumber(string messageText)
