@@ -5,7 +5,7 @@
 
 }
 
-// Method1();
+Method1();
 
 void Method2(string msg)
 {
@@ -15,7 +15,7 @@ void Method2(string msg)
 
 }
 
-//Method2("Text message");
+Method2("Text message");
 
 void Method21(string msg, int count)
 {
@@ -32,7 +32,7 @@ void Method21(string msg, int count)
 
 }
 
-//Method21(count: 6, msg: "Text message");
+Method21(count: 6, msg: "Text message");
 
 int Method3()
 {
@@ -41,7 +41,7 @@ int Method3()
 
 }
 
-//Console.WriteLine(Method3());
+Console.WriteLine(Method3());
 
 // string Method4(int count, string text)
 // {
@@ -73,7 +73,7 @@ string Method4(int count, string text)
 
     return result;
 }
- //Console.WriteLine(Method4(10,"123"));
+Console.WriteLine(Method4(10,"123"));
 
 for (int i = 0; i <= 10; i++)
 {
