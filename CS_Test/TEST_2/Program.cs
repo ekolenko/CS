@@ -1,18 +1,9 @@
-﻿
-int result = 2;
-int[] arr = new int[5];
+﻿var arr = new int[5]{1,2,3,4,5};
 
-
-for (int i = 0; i < 5; i++)
-    arr[i] = new Random().Next(0,10);
 MyFunc(arr);
 
-/*static*/ void MyFunc (int[] arrayIn)
+void MyFunc (int[] arrayIn)
 {
-result = 1;
-foreach (int e in arrayIn)
-   Console.Write(e+" "+result);
-
+   foreach (int e in arrayIn)
+   Console.Write(e + " ");
 }
-
-Console.WriteLine("\n"+result);
