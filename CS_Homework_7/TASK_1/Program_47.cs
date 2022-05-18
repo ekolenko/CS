@@ -39,8 +39,8 @@ void PrintArray(double [,] arrayIn)
     {
         for (int j = 0; j < arrayIn.GetLength(1); j++) 
         {
-            System.Console.Write(arrayIn[i,j] + " ");
+            Console.Write(arrayIn[i,j] + " ");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
 }
