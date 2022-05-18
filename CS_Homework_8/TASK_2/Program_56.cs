@@ -1,24 +1,25 @@
-﻿/*Задача 54: Задайте двумерный массив. Напишите программу, 
-которая упорядочит по убыванию элементы каждой строки двумерного массива.*/
+﻿/*Задача 56: Задайте прямоугольный двумерный массив. 
+Напишите программу, которая будет находить строку с наименьшей суммой элементов.*/
 
 uint m = InputNumber("Input number of rows: ");
 uint n = InputNumber("Input number of columns: ");
 
 int[,] arr = new int[m, n];
 
-RandomizeArray(arr, 1, 10);
+RandomizeArray(arr, 1, 10); 
 PrintArray(arr);
-
-SortArray(arr);
 Console.WriteLine();
-PrintArray(arr);
+
+int minSumRow = int.MaxValue;
+int minSumRowIndex = FindMinSumRowIndex(arr);
+Console.WriteLine($"Minimal sum {minSumRow} in row {minSumRowIndex}.");
 
 uint InputNumber(string message)
 {
     Console.Write(message);
     uint number;
 
-    while (!uint.TryParse(Console.ReadLine(), out number) & number < 0)
+    while (!uint.TryParse(Console.ReadLine(), out number))
     {
 
         Console.WriteLine("You inputed something wrong! Try again.");
@@ -49,33 +50,19 @@ void PrintArray(int[,] arrayIn)
     }
 }
 
-void SortArray(int[,] arrayIn)
-{
+int FindMinSumRowIndex(int[,] arrayIn)
+{   
+    int minSumRowIndex = 0;
     for (int i = 0; i < arrayIn.GetLength(0); i++)
-        SortLine(arrayIn, i);
-
-}
-
-void SortLine(int[,] arrayIn, int lineNumber)
-{
-    bool b = true;
-    int k = arrayIn.GetLength(1) - 1;
-    while (b)
     {
-        b = false;
-        for (int j = 0; j < k; j++)
-            if (arrayIn[lineNumber, j] < arrayIn[lineNumber, j + 1])
-            {
-                Swap(ref arrayIn[lineNumber, j], ref arrayIn[lineNumber, j + 1]);
-                b = true;
-            }
-        k--;
+        int SumRow = 0;
+        for (int j = 0; j < arrayIn.GetLength(1); j++)
+            SumRow += arrayIn[i, j];
+        if (SumRow < minSumRow)
+        {
+            minSumRow = SumRow;
+            minSumRowIndex = i;
+        }
     }
-}
-
-void Swap(ref int a, ref int b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
+    return minSumRowIndex;
 }
