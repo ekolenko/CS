@@ -18,7 +18,7 @@ uint InputNumber(string message)
     Console.Write(message);
     uint number;
 
-    while (!uint.TryParse(Console.ReadLine(), out number) & number < 0)
+    while (!uint.TryParse(Console.ReadLine(), out number))
     {
 
         Console.WriteLine("You inputed something wrong! Try again.");
