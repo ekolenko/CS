@@ -9,9 +9,9 @@ System.Console.WriteLine(sumM(n));
 uint sumM(uint n)
 {
 
-    if (n / 10 == 0)
+    if (n < 10)
     {
-        return n % 10;
+        return n ;
     }
     else
     {

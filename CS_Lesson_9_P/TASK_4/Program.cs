@@ -9,15 +9,14 @@ System.Console.WriteLine(Pow(a,b));
 
 int Pow(int a, int b)
 {
-
-    if (b == 1)
-    {
+    if (b == 0)
+        return 1;
+    
+    else if (b == 1)
         return a;
-    }
+    
     else
-    {
         return a * Pow(a, --b);
-    }
 
 }
 
